@@ -1,0 +1,175 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Uow",
+		"_postman_id": "67522fd6-f426-c0af-b261-7fbc39e4b5ba",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Usuário",
+			"request": {
+				"url": "localhost:8081/candidate/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Lucas\",\n\t\"cpf\": \"123456\",\n\t\"email\": \"maia.arauj01@gmail.com\",\n\t\"senha\": \"123456\",\n\t\"telefone\": \"2126368229\",\n\t\"endereco\": {\n\t\t\"cep\": 24932190,\n\t\t\"estado\": \"RJ\",\n\t\t\"cidade\": \"Rio de Janeiro\",\n\t\t\"bairro\": \"São José\",\n\t\t\"numero\":\"123\",\t\n\t\t\"complemento\":\"Rua do lado\"\n\t\t},\n\t\"status\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "localhost:8081/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"maia.arauj01@gmail.com\",\n  \"senha\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Usuário",
+			"request": {
+				"url": "localhost:8080/candidate/4",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Cadastro",
+			"request": {
+				"url": "localhost:8080/candidate/4",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Lucas\",\n\t\"cpf\": \"123456\",\n\t\"email\": \"maia.araujo@gmail.com\",\n\t\"senha\": \"123456\",\n\t\"telefone\": \"2126368229\",\n\t\"endereco\": {\n\t\t\"cep\": 24932190,\n\t\t\"estado\": \"RJ\",\n\t\t\"cidade\": \"Rio de Janeiro\",\n\t\t\"bairro\": \"São José\",\n\t\t\"numero\":\"123\",\t\n\t\t\"complemento\":\"Rua do Lado\"\n\t\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Empresa",
+			"request": {
+				"url": "localhost:8081/company/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"UVA - Universidade Veiga de Almeida\",\n\t\"cnpj\": \"123456\",\n\t\"email\": \"lucas@m4u.com.br\",\n\t\"senha\": \"123456\",\n\t\"telefone\": \"2126368229\",\n\t\"endereco\": {\n\t\t\"cep\": 24932190,\n\t\t\"estado\": \"RJ\",\n\t\t\"cidade\": \"Rio de Janeiro\",\n\t\t\"bairro\": \"São José\",\n\t\t\"numero\":\"123\",\t\n\t\t\"complemento\":\"Rua do lado\"\n\t\t},\n\t\"descricao\": \"A UVA é uma universidade com vários cursos, sempre visando o melhor do ensino superior, vem trabalhar aqui também.\",\n\t\"videoYoutube\":\"FwbQ_PZzDIc\",\n\t\"imagem\": \"https://odiarioinformativo.files.wordpress.com/2016/04/logo_uva_em_alta1.jpg\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar empresa ",
+			"request": {
+				"url": "localhost:8081/company/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"M4U\",\n\t\"cnpj\": \"123456\",\n\t\"email\": \"contato@m4u.com.br\",\n\t\"senha\": \"123456\",\n\t\"telefone\": \"2126368229\",\n\t\"endereco\": {\n\t\t\"cep\": 24932190,\n\t\t\"estado\": \"RJ\",\n\t\t\"cidade\": \"Rio de Janeiro\",\n\t\t\"bairro\": \"São José\",\n\t\t\"numero\":\"123\",\t\n\t\t\"complemento\":\"Rua do lado\"\n\t\t},\n\t\"descricao\": \"A M4U é uma empresa do grupo Cielo com 250 colaboradores, dos quais 150 são desenvolvedores, unidos pelo propósito de desenvolver e operar serviços digitais de missão crítica.\",\n\t\"videoYoutube\":\"Tyn7XhX77j4\",\n\t\"imagem\": \"https://thumb.lovemondays.com.br/image/6822cac3aa5b4de0b30ef46845a7d244/logos/deadd0/m4u.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todas as empresas",
+			"request": {
+				"url": "localhost:8081/company",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Vaga",
+			"request": {
+				"url": "localhost:8081/company/5/vacancy",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"titulo\": \"Estágio em Desenvolvimento\",\n\t\"descricao\":\"Trabalhar com Docker, Spring-boot e manter o código limpo\",\n\t\"salario\":2000,\n\t\"endereco\": {\n\t\t\"cep\": 24932190,\n\t\t\"estado\": \"RJ\",\n\t\t\"cidade\": \"Rio de Janeiro\",\n\t\t\"bairro\": \"São José\",\n\t\t\"numero\":\"123\",\t\n\t\t\"complemento\":\"Rua do Lado\"\n\t\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Consultando Vagas de uma empresa ",
+			"request": {
+				"url": "localhost:8081/company/9/vacancys",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Inscrevendo Usuario na Vaga",
+			"request": {
+				"url": "localhost:8080/candidate/4/subscribe/13",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
